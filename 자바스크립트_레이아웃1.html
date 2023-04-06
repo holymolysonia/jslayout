@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_레이아웃1</title>
+    <link href="css/20230331.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#">
+                    <img src="img/icons8-맥-os-50.png" alt="로고" />
+                </a>
+            </h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">할인</a></li>
+                    <li><a href="#">정보</a></li>
+                    <li><a href="#">단독</a></li>
+                </ul><!-- .gnb end -->
+            </nav>
+            <figure>
+                <img id=allmenubtn src="img/free-icon-menu-2976215.png" alt="전체메뉴" />
+            </figure>
+            <div id="allmenu" class="allmenu">
+                <ul class="allmenu_wrap">
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">할인</a></li>
+                    <li><a href="#">정보</a></li>
+                    <li><a href="#">단독</a></li>
+                    <li><a href="#">구독</a></li>
+                </ul><!-- .allmenu_wrap end -->
+            </div><!-- .allmenu end -->
+        </div><!-- .inner end -->
+    </header>
+    <main>
+        <section class="main_visual">
+            <img src="img/palace-gea880b5c9_1920.jpg" alt="메인비주얼" />
+        </section><!-- .main_visual end -->
+
+        <section class="cont01">
+            <div class="item">
+                <figure>
+                    <img class="touchimg" src="img/willian-justen-de-vasconcellos-vl8c7EdncnE-unsplash.jpg"
+                        alt="[하동] 당일 #쌍계사10리벚꽃길 #화개장터 #벚꽃여행" />
+                </figure>
+                <div class="text">
+                    <h2>[하동] 당일 <br />
+                        #쌍계사10리벚꽃길<br />
+                        #화개장터 #벚꽃여행</h2>
+                    <p class="addexp">한국관광공사가 추천하는, 눈부신 4월의 설원과 같이 흩날리는 벚꽃의 쌍계사10리벚꽃길과 화개장터를 둘러보는 하동 당일 봄 여행 상품입니다.</p>
+                    <!-- .add exp end -->
+                    <p class="price">41,900원</p><!-- .price end -->
+                    <p class="button" id="box">다른이미지보기</p><!-- .button end -->
+                </div><!-- .text -->
+            </div><!-- .item end -->
+        </section><!-- .cont01 end -->
+
+        <section class="cont02">
+            <div class="item">
+                <figure>
+                    <img class="touchimg2" src="img/sunrise-g04b16453d_1920.jpg"
+                        alt="[제주] 핫플레이스 3일 #산양큰엉곶 #수목원야시장 #사려니숲길" />
+                </figure>
+                <div class="text">
+                    <h2>[제주] 핫플레이스 3일<br />
+                        #산양큰엉곶 #수목원야시장 #사려니숲길</h2>
+                    <p class="addexp">레트로 감성의 미디어아트 노형슈퍼마켙을 비롯하여 사려니숲길 등 제주 핫플 관광지를 둘러봅니다. 제주 특유의 제주도 근고기 및 특식을 즐기실 수
+                        있습니다.</p>
+                    <!-- .add exp end -->
+                    <p class="price">319,000원~</p><!-- .price end -->
+                    <p class="button" id="box1">다른이미지보기</p><!-- .button end -->
+                </div><!-- .text -->
+            </div><!-- .item end -->
+        </section><!-- .cont02 end -->
+
+        <section class="cont03">
+            <div class="inner">
+                <div class="item">
+                    <figure>
+                        <img class="changeimg" src="img/japan-g25b32cd52_1920.jpg" alt="꿈을 담은 특별한 여행" />
+                    </figure>
+
+                    <div class="text">
+                        <h2>꿈을 담은 특별한 여행</h2>
+                        <p class="addexp">떠나고 싶은 마음에게 쉽게 답을 드리는
+                            여행이지와 함께 특별한 경험을 시작하세요.
+                        </p><!-- .addexp end -->
+                        <p class="imgbutton">이미지 보기<span class="number">1</span>/4</p><!-- .imgbutton end -->
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+            </div><!-- .inner end -->
+        </section><!-- .cont03 end -->
+    </main>
+
+    <script>
+        let viewImgBtn = document.getElementById('box');
+        let viewImgBtn1 = document.getElementById('box1');
+        let photo = document.getElementsByClassName('touchimg')[0];
+        let photo2 = document.getElementsByClassName('touchimg2')[0];
+
+        viewImgBtn.onmouseenter = function () {
+            photo.src = 'img/axp-photography-XB42Cq89I14-unsplash.jpg';
+            photo.style.transform = 'scale(0.8)';
+            photo.style.transition = '1.3s';
+            photo.style.borderRadius = '100px';
+        }//viewImgBtn.onmouseenter end
+
+        viewImgBtn.onmouseleave = function () {
+            photo.src = 'img/willian-justen-de-vasconcellos-vl8c7EdncnE-unsplash.jpg';
+            photo.style.transform = 'scale(1)';
+            photo.style.transition = '1.3s';
+            photo.style.borderRadius = '0';
+        }//viewImgBtn.onmouseleave end
+
+        viewImgBtn1.onmouseenter = function () {
+            photo2.src = 'img/japan-g6cbcc578b_1920.jpg';
+            photo2.style.transform = 'scale(0.8)';
+            photo2.style.transition = '1.3s';
+            photo2.style.borderRadius = '100px';
+        }//viewImgBtn1.onmouseenter end
+
+        viewImgBtn1.onmouseleave = function () {
+            photo2.src = 'img/sunrise-g04b16453d_1920.jpg';
+            photo2.style.transform = 'scale(1)';
+            photo2.style.transition = '1.3s';
+            photo2.style.borderRadius = '0';
+        }//viewImgBtn1.onmouseleave end
+
+
+        let imgSwap = document.getElementsByClassName('changeimg')[0];
+        let swapBtn = document.getElementsByClassName('imgbutton')[0];
+        let num = document.getElementsByClassName('number')[0];
+        let i = 0;
+
+        let img1 = 'img/japan-g25b32cd52_1920.jpg';
+        let img2 = 'img/warren-wong-WukitUSJRgY-unsplash.jpg';
+        let img3 = 'img/willian-justen-de-vasconcellos-1GoQ1k9b-9Q-unsplash (1).jpg';
+        let img4 = 'img/timothy-eberly-yuiJO6bvHi4-unsplash.jpg';
+        let imgList = [img1, img2, img3, img4];
+        let numList = [1, 2, 3, 4];
+
+
+        swapBtn.onclick = function () {
+            i++;
+            console.log[i];
+            if (i >= imgList.length) {
+                i = 0;
+            }
+            imgSwap.src = imgList[i];
+            num.innerText = numList[i];
+        }//swapBtn.onclick end
+
+
+        let allMenuBtn = document.getElementById('allmenubtn');
+        let allMenu = document.getElementById('allmenu');
+        allMenu.style.opacity = '0';
+
+        allMenuBtn.onclick = function () {
+            if (allMenu.style.opacity == '0') {
+                allMenu.style.opacity = '100';
+                allMenu.style.transition = '0.6s';
+                allMenuBtn.src = 'img/free-icon-x-657059.png';
+            } else {
+                allMenu.style.opacity = '0';
+                allMenuBtn.src = 'img/free-icon-menu-2976215.png';
+            }
+        }//allMenuBtn.onclick end
+    </script>
+</body>
+
+</html>
