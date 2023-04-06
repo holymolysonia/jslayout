@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+}
+
+/* 📢📢.cont01📢📢 */
+.cont01 {
+    width: 1440px;
+    margin: 100px auto;
+}
+
+.cont01 h3 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .list .item {
+    width: 460px;
+    border: 2px solid #333;
+}
+
+.cont01 .list .item a {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.cont01 .list .item:nth-child(2) a figure {
+    order: 1;
+    /* 직계부모에게(a) display:flex가 있을 때만 사용 가능한 속성 */
+}
+
+.cont01 .list .item figure {
+    width: 100%;
+    height: 500px;
+}
+
+.cont01 .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .list .item p {
+    font-size: 18px;
+    padding: 40px;
+    line-height: 1.3;
+    /* 폰트크기 * 1.3 => 23.4 */
+}
+
+.cont01 .list .item:nth-child(2) figure {
+    border-top: 2px solid #333;
+}
+
+.cont01 .list .item:nth-child(2) p {
+    border-top: 0;
+
+    white-space: nowrap;
+    /* 영역 벗어나면서 한 줄로 표시 */
+    text-overflow: ellipsis;
+    /* 말줄임표 기호 (...) */
+    overflow: hidden;
+    /* 넘어가면 안 보이게 만들어줌
+    
+    => 저 세 줄이 세트임*/
+}
+
+.cont01 .list .item:nth-child(3) p {
+    /* 여러줄 말줄임표 */
+    display: -webkit-box;
+    /* 박스설정 */
+    -webkit-box-orient: vertical;
+    /* 박스방향설정: 세로 */
+    -webkit-line-clamp: 2;
+    /* 박스 안에서 보여지고자 하는 라인 수  */
+    overflow: hidden;
+    /* 지정할 때 height값 설정을 해주거나 padding을 지워야 함 */
+    padding-bottom: 0;
+
+    text-transform: uppercase;
+    /* 소문자를 대문자로 전부 바꿔줌 (영문에서적용) */
+    /*     text-transform: lowercase;
+    => 대문자를 소문자로 변환 */
+
+}

@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+}
+
+/* 📢📢header📢📢 */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .inner {
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner h1 a img {
+    width: 50px;
+    filter: invert(100%);
+}
+
+header .menu_icon img {
+    width: 40px;
+    filter: invert(100%);
+}
+
+/* 📢📢.main_visual📢📢 */
+.main_visual {
+    width: 100%;
+    height: 100vh;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 📢📢.cont01📢📢 */
+.cont01 .list .item {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.cont01 .list .item figure {
+    width: 50%;
+    height: 100%;
+}
+
+.cont01 .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .list .item div {
+    width: 50%;
+    padding: 0 120px;
+}
+
+.cont01 .list .item div h4 {
+    font-size: 50px;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+
+.cont01 .list .item div p {
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 20px 0 80px 0;
+}
+
+.cont01 .list .item div strong {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cont01 .list .item div button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: #a0a0a0 5px 5px 10px;
+    background-color: rgb(55, 73, 112);
+    color: #fff;
+}
+
+.cont01 .list .item:nth-child(2) div {
+    order: -1;
+}
+
+/* 📢📢.cont02📢📢 */
+.cont02 {
+    background-color: rgb(35, 59, 63);
+    padding: 200px 0;
+}
+
+.cont02 .inner {
+    width: 1600px;
+    margin: 0 auto;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cont02 .inner figure {
+    width: 50%;
+    height: 100%;
+}
+
+.cont02 .inner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont02 .inner div {
+    width: 50%;
+    color: #fff;
+    padding: 100px;
+}
+
+.cont02 .inner div h4 {
+    font-size: 50px;
+}
+
+.cont02 .inner div p {
+    font-size: 22px;
+    line-height: 1.3;
+    word-break: keep-all;
+    margin: 20px 0 80px 0;
+}
+
+.cont02 .inner div button {
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    padding: 10px 30px; 
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #000;
+}

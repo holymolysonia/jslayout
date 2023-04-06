@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    color: #333;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+/* 📢📢 .cont01 📢📢 */
+.cont01 {
+    width: 1440px;
+    margin: 100px auto;
+}
+
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .list .item_wrap {
+    width: 464px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.cont01 .list .item_wrap .item {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.cont01 .list .item_wrap .item figure {
+    width: 100%;
+    height: 100%;
+}
+
+.cont01 .list .item_wrap .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .list .item_wrap .item div {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    color: #fff;
+}
+
+.cont01 .list .item_center {
+    width: 464px;
+    height: 630px;
+    position: relative;
+}
+
+.cont01 .list .item_center figure {
+    width: 100%;
+    height: 100%;
+}
+
+.cont01 .list .item_center figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .list .item_center div {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    color: #fff;
+}
+
+.cont01 .list div h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cont01 .list figure {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.cont01 .list figure img {
+    transition: 1s;
+    /* 이미지 위에 커서를 올렸을 때, 벗어났을 때 둘다 부드럽게 변화 */
+}
+
+.cont01 .list figure:hover img {
+    transform: scale(1.2);
+    /* 이미지 1.2배 확대 */
+
+    /* transition:1s; 
+    => 마우스르 올렸을 때만 부드럽고 벗어났을 때는 적용 x */
+}
+
+/* 📢📢 .cont01 📢📢 */
+.cont02 {
+    background-color: #075d46;
+    padding: 100px 0;
+}
+
+.cont02 .inner {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.cont02 .inner h3 {
+    color: #fff;
+}
+
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont02 .inner .list .item {
+    width: 952px;
+    height: 458px;
+    background-color: #fff;
+    font-size: 24px;
+    padding: 60px 70px;
+    border-radius: 20px;
+}
+
+.cont02 .inner .list .item_wrap {
+    width: 464px ;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.cont02 .inner .list .item_wrap div {
+    width: 100%;
+    height: 135px;
+    background-color: #fff;
+    padding: 0px 40px;
+    border-radius: 20px;
+    line-height: 135px;
+    font-size: 24px;
+    position: relative;
+}
+
+.cont02 .inner .list .item_wrap div::before {
+    content: '';
+    display: block;
+    background-image: url('../img/271228.png') ;
+    /* 외부 css 파일에서 img를 불러오는 경로
+    ../ => 폴더에서 나간다 */
+    background-size: 100%;
+    /* 가로를 20만큼 세로를 20만큼 채워줌 */
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+

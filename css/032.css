@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+    line-height: 1;
+    font-family: 'GmarketSansMedium';
+}
+
+/* 📢📢.main_visual📢📢 */
+.main_visual {
+    width: calc(100% - 100px);
+    height: 700px;
+    margin: 50px auto;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🟡공통 .title */
+.title {
+    margin-bottom: 40px;
+}
+
+.title h3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.title p {
+    font-size: 20px;
+}
+
+/* 📢📢.cont01📢📢 */
+.cont01 {
+    margin: 100px 0;
+}
+
+.cont01 .inner {
+    width: calc(100% - 100px);
+    margin: 0 auto;
+}
+
+.cont01 .inner ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .inner ul li {
+    background-color: #000000;
+    color: #fff;
+    border-radius: 50%;
+    width: calc(100% / 10 - 20px);
+    height: calc((100vw - 100px) / 10 - 20px);
+    /* 
+    100vw = width:100%
+    100vh = height:100%
+     */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 단독으로 정렬을 할 때도 사용 */
+}
+
+.cont01 .inner ul li:hover {
+    background-color: #b60000;
+    transition: 0.3s;
+}
+
+/* 📢📢.cont02📢📢 */
+.cont02 {
+    background: url('/img/joshua-woroniecki-1yVlVKQIVOk-unsplash.jpg') center center / cover no-repeat;
+    padding: 100px 0;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+.cont02::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.cont02 .inner {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.cont02 .inner .title {
+    color: #fff;
+}
+
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont02 .inner .list .item {
+    width: calc(100% / 5 - 20px);
+    background-color: #fff;
+    padding: 20px;
+}
+
+.cont02 .inner .list .item:hover {
+    transform: translate(0, -10px);
+    transition: 0.7s;
+}
+
+.cont02 .inner .list .item figure {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.cont02 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+}
+
+/* 🟡img.img_after => hover할 때 나타날 이미지 */
+
+.cont02 .inner .list .item figure img.img_after
+
+/* img.img_after => 이미지태그에 붙어있는 클래스 명 img_after이다 
+
+=> 해당하는 태그한테 붙어있는 클래스명이다 라고 지정할 수 있음*/
+    {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* .마우스 올렸을 때 img.img_before 사라짐 */
+.cont02 .inner .list .item:hover figure img.img_before {
+    opacity: 0;
+}
+
+/* 마우스 올렸을 때 img.img_after가 나타남 */
+.cont02 .inner .list .item:hover figure img.img_after {
+    opacity: 100;
+}
+
+.cont02 .inner .list .item figure p {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    background-color: #d1bca4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 20px 0;
+}
+
+.cont02 .inner .list .item h4 {
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+}
+
+/*
+이미지 변경 효과를 부드럽게 하려면 display:none, display:block이 아니라
+opacity:0, opacity:100을 사용하고
+position으로 이미지의 위치를 조정시켜줘야함
+ */

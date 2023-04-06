@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    background-color: #d3dde6;
+}
+
+.hd_01 {
+    height: 100px;
+    background-color: #bbcbff;
+    border-bottom: 1px solid #333;
+}
+
+.hd_01 .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 0 auto;
+    line-height: 100px;
+}
+
+.hd_01 .inner h1 {
+    height: 100%;
+    position: relative;
+}
+
+.hd_01 .inner h1 a img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    height: 80px;
+    object-fit: cover;
+}
+
+.hd_01 .inner nav .gnb .depth01 {
+    display: inline-block;
+    /* 메뉴 하나가 떨어져있음 
+    => 메뉴 개수가 다르면 아래쪽에 맞춰서 정렬된 것을 볼 수 있음 */
+    padding: 0 50px;
+    vertical-align: top;
+    /*
+    inline요소가 있을대 세로 정렬 방향설정
+    이 속성을 통해서 윗쪽에 맞춰서 정렬될 수 있도록 함
+    (display:inline-block, inline요소가 있을 때 사용할 수 있음) */
+    position: relative;
+}
+
+.hd_01 .inner nav .gnb:hover .depth01 .depth02 {
+    display: block;
+}
+
+/* 1차 메뉴 호버했을 때 2차 메뉴 전체가 나오는 것은 gnb:hover */
+
+.hd_01 .inner nav .gnb .depth01 .depth02 {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hd_01 .inner nav .gnb .depth01 .depth02 li {
+    line-height: 1;
+    padding: 10px 20px;
+}
+
+/* 헤더 2차 메뉴의 뒷배경 컬러 만들기 */
+.hd_01 .inner nav .gnb::before {
+    content: '';
+    width: 100%;
+    height: 180px;
+    background-color: #ace9e9;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: none;
+}
+
+.hd_01 .inner nav .gnb:hover::before {
+    display: block;
+}
+
+.hd_01 .inner nav .gnb .depth01:hover .depth02 {
+    background-color: #ffffff;
+}
+
+.hd_01 .inner .menu li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* 📢📢.hd_02📢📢 */
+.hd_02 {
+    margin-top: 200px;
+    background-color: #bbcbff;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+
+.hd_02 .inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.hd_02 .inner .hd_top {
+    text-align: right;
+    height: 50px;
+    line-height: 50px;
+}
+
+.hd_02 .inner .hd_top::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    display: block;
+    position: absolute;
+    /* 가로가 화면 전체를 따라가게 하려면 hd_02에 relative를 잡아주고 가상선택자에게 absolute를 잡아준다.
+    => relative의 width의 100%를 따라감*/
+    top: 50px;
+    left: 0;
+}
+
+.hd_02 .inner .hd_top li {
+    display: inline-block;
+}
+
+.hd_02 .inner .hd_bottom {
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hd_02 .inner .hd_bottom h1 a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hd_02 .inner .hd_bottom h1 a img {
+    height: 60px;
+}
+
+.hd_02 .inner .hd_bottom nav .gnb .depth01 {
+    display: inline-block;
+    vertical-align: top;
+    /* display:inline-block일때 vertical-align:top을 사용하면 윗쪽에 맞춰서 정렬이 이루어짐 */
+    padding: 0 40px;
+    text-align: center;
+    position: relative;
+}
+
+.hd_02 .inner .hd_bottom nav .gnb .depth01 .depth02 li {
+    line-height: 1;
+    padding: 20px 0;
+}
+
+.hd_02 .inner .hd_bottom nav .gnb .depth01 .depth02 {
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: none;
+}
+
+.hd_02 .inner .hd_bottom nav .gnb .depth01:hover .depth02 {
+    display: block;
+    background-color: #000000;
+    color: #fff;
+}
+
+/* 📢📢.hd_03📢📢 */
+.hd_03 {
+    background-color: #bbcbff;
+    margin: 200px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+
+.hd_03 .inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.hd_03 .inner .hd_top {
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hd_03 .inner .hd_top ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.hd_03 .inner .hd_top h1 {
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hd_03 .inner .hd_top h1 a img {
+    height: 60px;
+}
+
+.hd_03::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+
+.hd_03 .inner nav {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    /* 인라인 요소를 감싸고 있는 부모 선택자에게 text-align: center
+    => 수평 중앙 정렬 */
+}
+
+.hd_03 .inner nav .gnb .depth01 {
+    display: inline-block;
+    padding: 0 50px;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+}
+
+.hd_03 .inner nav .gnb .depth01 .depth02 {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.hd_03 .inner nav .gnb::before {
+    content: '';
+    width: 100%;
+    height: 200px;
+    background-color: #000000;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    display: none;
+}
+
+.hd_03 .inner nav .gnb:hover .depth01 .depth02, .hd_03 .inner nav .gnb:hover::before {
+    display: block;
+    color: #fff;
+}
+

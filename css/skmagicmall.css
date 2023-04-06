@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+    font-family: 'Pretendard-Regular';
+    line-height: 1;
+}
+
+/* 📢📢.cont01📢📢 */
+.cont01 {
+    width: 1440px;
+    margin: 120px auto;
+}
+
+.cont01 .inner h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.cont01 .inner ul {
+    display: flex;
+}
+
+.cont01 .inner .tap_menu1 {
+    margin-bottom: 30px;
+}
+
+.cont01 .inner .tap_menu1 li {
+    padding: 0 20px;
+    margin: 0 15px;
+    height: 45px;
+    background-color: #f5f6f7;
+    line-height: 45px;
+    border-radius: 20px;
+}
+
+.cont01 .inner .tap_menu1 li:hover {
+    background-color: #f47726;
+    color: #fff;
+}
+
+.cont01 .inner .tap_menu2 {
+    margin-bottom: 50px;
+}
+
+.cont01 .inner .tap_menu2 li:hover {
+    font-weight: 700;
+}
+
+.cont01 .inner .tap_menu2 li::after {
+    content: '';
+    background-color: #ccc;
+    height: 8px;
+    width: 1px;
+    background-size: 100%;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.cont01 .inner .list {
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont01 .inner .list .item {
+    width: 830px;
+    height: 800px;
+    position: relative;
+}
+
+.cont01 .inner .list .item figure {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cont01 .inner .list .item figure::before {
+    content: '1';
+    background-color: #000;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.cont01 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .inner .list .item figure:hover .hidden_text {
+    bottom: 0;
+}
+
+.cont01 .inner .list .item figure .hidden_text {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    display: block;
+    width: 830px;
+    height: 70px;
+    transition: 0.6s;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont01 .inner .list .item figure .hidden_text p {
+    font-size: 30px;
+}
+
+.cont01 .inner .item figure .hidden_text span {
+    font-size: 20px;
+}
+
+.cont01 .inner .item figure .hidden_text span strong {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.cont01 .inner .list .item .item_text {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.cont01 .inner .list .item .item_text h4 {
+    font-size: 40px;
+    white-space: nowrap;
+    /* 줄바꿈방지태그 */
+}
+
+.cont01 .inner .list .item .item_text p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.cont01 .inner .list .item_wrap {
+    width: 586px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.cont01 .inner .list .item_wrap .item_right {
+    width: 100%;
+    height: 390px;
+    position: relative;
+}
+
+.cont01 .inner .list .item_wrap .item_right:nth-child(1)::before {
+    content: '2';
+    background-color: #000;
+    width: 35px;
+    height: 35px;
+    display: block;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.cont01 .inner .list .item_wrap .item_right:nth-child(2)::before {
+    content: '3';
+    background-color: #000;
+    width: 35px;
+    height: 35px;
+    display: block;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.cont01 .inner .list .item_wrap .item_right figure {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cont01 .inner .list .item_wrap .item_right figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .inner .list .item_wrap .item_right figure .hidden_text {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: block;
+    width: 586px;
+    height: 50px;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    transition: 0.6s;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+}
+
+.cont01 .inner .list .item_wrap .item_right figure:hover .hidden_text {
+    bottom: 0;
+}
+
+.cont01 .inner .list .item_wrap .item_right figure .hidden_text p {
+    font-size: 25px;
+}
+
+.cont01 .inner .list .item_warp .item_right figure .hidden_text span {
+    font-size: 20px;
+}
+
+.cont01 .inner .list .item_wrap .item_right figure .hidden_text span strong {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.cont01 .inner .list .item_wrap .item_right .item_text {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.cont01 .inner .list .item_wrap .item_right .item_text h4 {
+    font-size: 24px;
+    white-space: nowrap;
+    margin-bottom: 7px;
+}
+
+/* 📢📢.cont02📢📢 */
+.cont02 {
+    background-color: #f8f9fa;
+}
+
+.cont02 .inner {
+    width: 1440px;
+    padding: 120px 0;
+    margin: 0 auto;
+}
+
+.cont02 .inner h3 {
+    font-size: 32px;
+}
+
+.cont02 .inner>p {
+    margin: 30px 0 50px 0;
+}
+
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont02 .inner .list .item {
+    width: 342px;
+}
+
+.cont02 .inner .list .item figure {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.cont02 .inner .list .item figure:hover img {
+    transform: scale(1.2);
+}
+
+.cont02 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s;
+}
+
+.cont02 .inner .list .item div {
+    line-height: 1.3;
+}
+
+.cont02 .inner .list .item div strong {
+    font-size: 22px;
+    word-break: keep-all;
+}
+
+.cont02 .inner .list .item div p {
+    color: #666;
+    margin-top: 30px;
+}

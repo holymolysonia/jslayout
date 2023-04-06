@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+}
+
+/* 📢📢header📢📢 */
+header {
+    padding: 10px 20px;
+    height: 80px;
+    background-color: rgb(209, 216, 216);
+}
+
+header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 80px;
+}
+
+header .inner h1 {
+    height: 100%;
+}
+
+header .inner h1 a img {
+    height: 30px;
+}
+
+header .inner .depth01 .depth02 .menu_list {
+    display: none;
+}

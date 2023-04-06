@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+/* import는 css에 연결
+link는 html문서 안에 style태그 입력해서 연결 */
+
+/* 
+ 구글폰트 사용할 때 하나의 폰트 연결 한 뒤에 구글폰트 홈페이지에서 설정 지우고 다른 폰트 복사붙여넣기 해서 들고와야함
+=> 설정들이 다 합쳐지기 때문에 폰트를 여러개 쓰게 될 경우 번거롭고 복잡
+*/
+
+/* 
+눈누 => 간편 / 인터넷 끊기면 사용 못함 
+웹폰트 => 인터넷이 끊겨도 사용가능
+구글폰트 => 외국어폰트 많음
+
+가장 많이 사용되는 방법 => 웹폰트로 전환해서 사용
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    line-height: 1;
+}
+
+.main_visual {
+    height: 100vh;
+    position: relative;
+}
+
+.main_visual figure {
+    width: 100%;
+    height: 100%;
+}
+
+.main_visual figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.main_visual div {
+    font-family: 'PT Sans', sans-serif;
+    width: 100%;
+    /* position:absolute , text-align:center도 했는데 가운데로 안 가면 width 값을 잡아주면 됨 */
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    text-align: center;
+}
+
+.main_visual div h2 {
+    font-size: 80px;
+}
+
+.main_visual div p {
+    font-size: 24px;
+}
